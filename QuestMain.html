@@ -1,0 +1,2415 @@
+
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>评测君 </title>
+	<link href="css/public.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		input[type=radio]{
+			width:30px;
+			height:30px;
+		}
+	</style>
+	<script type="text/javascript">
+	
+		
+		function addUser() {
+			// 循环的k为第几道题
+			for (var k = 0; k<20; k++){
+				// 循环的i为第几个译文
+				for (var i = 0; i<4; i++){
+					var radio_name = "QQ"+(k+1)+"_" + (i+1)
+					// 获得该译文的radio button的组
+					var item_names = document.getElementsByName(radio_name);
+					var name_length = item_names.length;
+					//alert("个数 ：" + name_length);
+					for (var j = 0; j<name_length; j++){
+						if (item_names[j].checked == true){
+							// 第j个选项中 有一个答案被选中了，跳过下一题
+							//alert("id"+j+"的radio 被选中了!");
+							break;
+						}
+						// 已经到最后了，还是没有选中的
+						else if(j == item_names.length-1){ 
+							alert("第 "+ (k+1)+ " 题的第" + (i+1) +" 个译文的忘记打分啦!");
+							return false;
+						}
+					}
+				}
+			}
+		}
+	
+	</script>
+</head>
+
+
+<body >
+	<form action="Quest_sco.php" name = "reply" method="post" onsubmit="return addUser();">
+	<div style="margin:0 auto; text-align: left;width:1000px; position:relative;">
+			<center><h1>评测题目</h1></center>
+		<div classs="box">
+			<h4>
+				<span class="subject">1、原文：男子为多拿拆迁补偿，与妻子假离婚后又与他人假结婚。</span>      
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+	
+			<div id="item">
+				<label>译文1：The man made more compensation for the removal of demolition, and married his wife after the divorce and married others.</label>
+				<ul>
+					
+					<li>
+						<input id="a_1" name="QQ1_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ1_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ1_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ1_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ1_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="item">
+				<label>译文2：Man to take more demolition compensation, and his wife after a false divorce, and other people fake marriage.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ1_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ1_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ1_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ1_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ1_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="item">
+				<label>译文3：The man for more demolition compensation, and his wife after the divorce and others fake marriage.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ1_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ1_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ1_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ1_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ1_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="item">
+				<label>译文4：The man is to take more compensation for the demolition, with his wife false divorce and another fake marriage.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ1_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ1_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ1_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ1_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ1_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+			
+			
+		</div>
+		<div classs="box">
+			<h4>
+				<span class="subject">2、原文：贫困女大学生兼职十余份，就为资助3名学生读完三年初中。</span>      
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="item">
+				<label>译文1：The poor female college students have more than 10 part-time part time, to fund 3 students for three years of junior high school.</label>
+				<ul>
+					<li>
+						<input id="a_1" name="QQ2_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ2_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ2_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ2_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ2_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="item">
+				<label>译文2：Poor female college students part-time more than ten copies, for the support of 3 students read three years junior high school.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ2_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ2_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ2_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ2_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ2_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="item">
+				<label>译文3：Poverty female college students more than ten part-time, for the funding of three students to read three years junior high school.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ2_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ2_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ2_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ2_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ2_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="item">
+				<label>译文4：The poor female college students have spent more than a dozen part-time part-time jobs, for 3 students who have spent three years in junior high school.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ2_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ2_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ2_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ2_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ2_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+			
+			
+		</div>
+		
+		<div classs="box">
+			<h4>
+				<span class="subject">3、原文：儿子，你亲生父亲要从美国回来了。</span>      
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="item">
+				<label>译文1：Son, your real father is coming back from America.</label>
+				<ul>
+					<li>
+						<input id="a_1" name="QQ3_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ3_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ3_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ3_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ3_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="item">
+				<label>译文2：Son, your real father is coming back from america.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ3_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ3_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ3_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ3_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ3_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="item">
+				<label>译文3：Son, your biological father is coming back from America.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ3_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ3_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ3_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ3_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ3_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="item">
+				<label>译文4：Son, your real father is coming back from America.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ3_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ3_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ3_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ3_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ3_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+			
+			
+		</div>
+		<div classs="box">
+			<h4>
+				<span class="subject">4、原文：放着我来就好，这件事你是绝对办不到的。</span>      
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="item">
+				<label>译文1：Just leave me here. you can't do this.</label>
+				<ul>
+					
+					<li>
+						<input id="a_1" name="QQ4_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ4_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ4_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ4_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ4_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="item">
+				<label>译文2：Just leave me here. You can't do it.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ4_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ4_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ4_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ4_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ4_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="item">
+				<label>译文3：It 's like you can not do it.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ4_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ4_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ4_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ4_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ4_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="item">
+				<label>译文4：Just let me come. you can't do this.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ4_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ4_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ4_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ4_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ4_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+			
+			
+		</div>
+		<div classs="box">
+			<h4>
+				<span class="subject">5、原文：任何组织或者个人不得侵占、买卖或者以其他形式非法转让土地。</span>      
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="item">
+				<label>译文1：No organization or individual may occupy, sell or illegally transfer the land in other forms.</label>
+				<ul>
+					
+					<li>
+						<input id="a_1" name="QQ5_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ5_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ5_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ5_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ5_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="item">
+				<label>译文2：No organization or individual may encroach on, buy, sell or otherwise transfer land illegally.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ5_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ5_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ5_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ5_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ5_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="item">
+				<label>译文3：Any organization or individual may not encroach, trade or otherwise illegally transfer land.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ5_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ5_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ5_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ5_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ5_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="item">
+				<label>译文4：No organization or individual may encroach on, trade or otherwise illegally transfer land.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ5_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ5_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ5_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ5_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ5_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+			
+			
+		</div>
+		<div classs="box">
+			<h4>
+				<span class="subject">6、原文：生产经营单位应当具备本法和有关法律、行政法规和国家标准或者行业标准规定的安全生产条件；不具备安全生产条件的，不得从事生产经营活动。</span>        
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="itemBig">
+				<label>译文1：The production and operating unit shall have the safety production conditions stipulated in this law and relevant laws, administrative regulations and national standards or industry standards;If they are not equipped with safety production conditions, they shall not engage in production and business activities.</label>
+				<ul>
+					
+					<li>
+						<input id="a_1" name="QQ6_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ6_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ6_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ6_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ6_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="itemBig">
+				<label>译文2：Poor female college students part-time more than ten copies, for the support of 3 students read three years junior high school.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ6_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ6_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ6_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ6_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ6_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="itemBig">
+				<label>译文3：The production and operation unit shall have the conditions for safe production stipulated in this Law and the relevant laws, administrative regulations and national standards or industry standards. If the conditions for safe production are not provided, it shall not engage in production and business activities.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ6_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ6_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ6_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ6_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ6_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="itemBig">
+				<label>译文4：The production and operation unit shall have the safe production conditions stipulated in this Law and relevant laws, administrative regulations and national standards or industry standards; and not to engage in production and operation without the safe production conditions.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ6_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ6_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ6_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ6_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ6_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+			
+			
+		</div>
+		<div classs="box">
+			<h4>
+				<span class="subject">7、原文：近几年来，随着科技的不断进步，各国都在争相研发高超音速打击武器，如俄罗斯的“锆石”反舰导弹和美国的“快鹰”巡航导弹，这两款导弹的飞行速度都达到了8马赫。</span>        
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="itemBig">
+				<label>译文1：In recent years, with the continuous progress of science and technology, countries are scrambling to develop high-supersonic attack weapons.Such as Russia's "zircon"anti-ship missile and the US "Kuai ying"cruise missile, the two missiles have flown at 8 Mach 8.</label>
+				<ul>
+					
+					<li>
+						<input id="a_1" name="QQ7_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ7_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ7_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ7_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ7_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="itemBig">
+				<label>译文2：In recent years, with the continuous progress of science and technology, many countries are actively developing hypersonic weapons, such as Russia's "zircon" anti-ship missiles and the United States "Eagle" cruise missile, the two missile flight speed reached 8 Maher.</label>
+				<ul>
+					<li>
+						<input id="i_2" name="QQ7_2"  type="radio" value="2">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ7_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ7_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ7_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ7_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="itemBig">
+				<label>译文3：In recent years, with the continuous progress of science and technology, countries are competing in the development of hypersonic strike weapons, such as Russia's "zircon" anti-ship missiles and the United States "fast eagle" cruise missiles, both missiles flying speed Reached the eight Mach.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ7_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ7_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ7_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ7_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ7_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="itemBig">
+				<label>译文4：In recent years, with the development of science and technology, countries are scrambling to develop high-speed supersonic, such as the Russian "zircon"anti-ship missile and the United States "fast hawk"cruise missiles, which are flying at speeds of Mach 8.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ7_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ7_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ7_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ7_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ7_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+			
+			
+		</div>
+		<div classs="box">
+			<h4>
+				<span class="subject">8、原文：近期中国多次警告朝鲜若继续核试将遭严厉制裁，但朝鲜反应冷淡宣称继续核试，而美韩部署的萨德系统今已生效，国内舆论认为应废除中朝友好条约。</span>       
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="itemBig">
+				<label>译文1：In recent times, china has repeatedly warned that if North Korea continues its nuclear test, it will be severely punished, but the North has reacted coldly and declared to continue nuclear tests.And the Sade system deployed by the united states and south korea has taken effect, and domestic public opinion should abolish the repealed-at friendship treaty.</label>
+				<ul>
+					<li>
+						<input id="a_1" name="QQ8_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ8_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ8_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ8_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ8_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="itemBig">
+				<label>译文2：Recently Chinese repeatedly warned North Korea to continue nuclear test will be severely punished, but North Korea lukewarm announced to continue the nuclear test, South Korea and Sade system deployment now in force, the domestic public opinion should denounce a treaty of friendship.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ8_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ8_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ8_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ8_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ8_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="itemBig">
+				<label>译文3：Recently, China has repeatedly warned that if North Korea continues to undergo a rigorous sanction, but North Korea responded to the cold claim to continue nuclear test, and the deployment of the United States and South Korea Sade system has been in force, domestic public opinion that the abolition of Sino-DPRK friendship treaty.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ8_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ8_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ8_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ8_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ8_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="itemBig">
+				<label>译文4：In recent times, China has warned North Korea to continue its nuclear test if it continues to be severely sanctioned, but the DPRK has declared its nuclear test to continue, while the Thad system deployed by the US and South Korea has entered into force, and domestic public opinion should repeal the Sino-DPRK friendship treaty.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ8_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ8_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ8_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ8_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ8_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+			
+			
+		</div>
+		<div classs="box">
+			<h4>
+				<span class="subject">9、原文：成龙个人绝对是演技派的，成龙面部表情丰富，堪称亚洲第一人。</span>      
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="item">
+				<label>译文1：Jackie Chan is an absolute actor, Jackie Chan has a rich facial expression, which is the first person in Asia.</label>
+				<ul>
+					<li>
+						<input id="a_1" name="QQ9_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ9_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ9_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ9_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ9_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="item">
+				<label>译文2：Jackie Chan is definitely an actor, and Jackie Chan is rich in facial expressions. He is the first person in asia.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ9_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ9_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ9_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ9_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ9_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="item">
+				<label>译文3：Jackie Chan is definitely acting acting, Jackie Chan facial expressions rich, called the first person in Asia.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ9_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ9_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ9_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ9_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ9_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="item">
+				<label>译文4：Jackie Chan is an absolute actor, and Jackie Chan is the first person in Asia to face the rich facial expression.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ9_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ9_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ9_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ9_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ9_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+			
+			
+		</div>
+		<div classs="box">
+			<h4>
+				<span class="subject">10、原文：中国篮球协会第九届全国代表大会上，姚明当选篮球协会主席。</span>       
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="item">
+				<label>译文1：Yao Ming was elected chairman of the basketball association at the 9th National Congress of China Basketball Association.</label>
+				<ul>
+					
+					<li>
+						<input id="a_1" name="QQ10_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ10_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ10_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ10_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ10_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="item">
+				<label>译文2：At the Ninth National Basketball Congress of the Chinese Basketball Association, Yao Ming was elected president of the basketball association.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ10_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ10_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ10_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ10_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ10_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="item">
+				<label>译文3：China Basketball Association Ninth National Congress, Yao Ming was elected chairman of the Basketball Association.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ10_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ10_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ10_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ10_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ10_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="item">
+				<label>译文4：At the 9th National Congress of the Chinese Basketball Association, Yao Ming was elected president of the Basketball Association.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ10_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ10_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ10_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ10_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ10_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+			
+			
+		</div>
+		<div classs="box">
+			<h4>
+				<span class="subject">11、原文：接发球抢攻动作结束后，要立即作好对攻或连续攻的准备，以便继续处于主动地位。</span>      
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="item">
+				<label>译文1：After the operation of the service is finished, it is necessary to be ready to attack and attack immediately so as to continue to be in the active position.</label>
+				<ul>
+					<li>
+						<input id="a_1" name="QQ11_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ11_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ11_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ11_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ11_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="item">
+				<label>译文2：At the Ninth National Basketball Congress of the Chinese Basketball Association, Yao Ming was elected president of the basketball association.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ11_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ11_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ11_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ11_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ11_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="item">
+				<label>译文3：Attend the attack after the end of the action, to immediately make a good attack or continuous attack in order to continue to take the initiative.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ11_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ11_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ11_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ11_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ11_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="item">
+				<label>译文4：After the operation of the receiving and returning to the reception, be ready to be ready for a continuous attack, so as to continue to be active.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ11_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ11_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ11_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ11_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ11_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+		</div>
+		
+		
+		<div classs="box">
+			<h4>
+				<span class="subject">12、原文：开场之后，他为球队率先得分，并在被封盖之后抢下篮板二次进攻得分。</span>      
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="item">
+				<label>译文1：After the opening, he scored the first score for the team and took a second attack after being blocked and scored two attacks.</label>
+				<ul>
+					<li>
+						<input id="a_1" name="QQ12_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ12_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ12_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ12_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ12_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="item">
+				<label>译文2：Receive attack action after the attack or attack immediately for continuous preparation, in order to continue in the initiative.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ12_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ12_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ12_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ12_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ12_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="item">
+				<label>译文3：After the opening, he scored for the team, and after being blocked to grab the next two offensive offensive score.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ12_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ12_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ12_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ12_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ12_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="item">
+				<label>译文4：After the opening, he scored for the team and took two offensive points after being sealed.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ12_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ12_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ12_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ12_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ12_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>	
+		</div>
+		
+		
+		<div classs="box">
+			<h4>
+				<span class="subject">13、原文：按一下呼叫按钮，空姐就会立即过来。</span>       
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="item">
+				<label>译文1：Press the call button and the stewardess will come right away.</label>
+				<ul>
+					<li>
+						<input id="a_1" name="QQ13_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ13_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ13_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ13_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ13_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="item">
+				<label>译文2：After the opening, he scored for the team, grabbed the backboard after being blocked and scored two attacks.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ13_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ13_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ13_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ13_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ13_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="item">
+				<label>译文3：Press the call button, flight attendants will immediately come.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ13_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ13_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ13_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ13_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ13_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="item">
+				<label>译文4：Click on the call button and the stewardess will come right away.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ13_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ13_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ13_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ13_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ13_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+			
+			
+		</div>
+		
+		<div classs="box">
+			<h4>
+				<span class="subject">14、原文：别让那些贪心的出租车司机多收你的钱。</span>       
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="item">
+				<label>译文1：Don't let those greedy taxi drivers take your money more.</label>
+				<ul>
+					<li>
+						<input id="a_1" name="QQ14_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ14_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ14_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ14_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ14_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="item">
+				<label>译文2：Press the call button and the flight attendant will come right away.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ14_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ14_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ14_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ14_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ14_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="item">
+				<label>译文3：Do not let those greedy taxi drivers get your money too much.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ14_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ14_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ14_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ14_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ14_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="item">
+				<label>译文4：Don't let the greedy taxi drivers take your money.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ14_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ14_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ14_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ14_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ14_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+			
+			
+		</div>
+		
+		<div classs="box">
+			<h4>
+				<span class="subject">15、原文：按照轨迹来划分，质点运动的轨迹是直线的运动叫做直线运动，是曲线的运动叫做曲线运动。</span>       
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="item">
+				<label>译文1：According to the trajectory, the trajectory of the particle movement is the motion of a straight line, which is called linear motion, which is the motion of curve called curve motion.</label>
+				<ul>
+					<li>
+						<input id="a_1" name="QQ15_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ15_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ15_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ15_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ15_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="item">
+				<label>译文2：According to the trajectory to divide, the trajectory of the particle motion is a straight line, the motion is called the straight line movement, is the curve movement, is called the curve movement.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ15_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ15_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ15_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ15_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ15_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="item">
+				<label>译文3：According to the track to divide, the movement of the particle movement is a linear motion called a linear motion, the movement of the curve is called the curve movement.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ15_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ15_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ15_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ15_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ15_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="item">
+				<label>译文4：According to the trajectory, the trajectory of the particle motion is the motion of a straight line, which is called the curve movement.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ15_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ15_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ15_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ15_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ15_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+			
+			
+		</div>
+		
+		<div classs="box">
+			<h4>
+				<span class="subject">16、原文：并联电路中电流的特点是干路上的电流等于各支路电流之和。</span>     
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="item">
+				<label>译文1：The current characteristic of parallel circuit is that the current in the dry path is equal to the sum of the current of each branch of the branch.</label>
+				<ul>
+					<li>
+						<input id="a_1" name="QQ16_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ16_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ16_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ16_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ16_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="item">
+				<label>译文2：The characteristics of current shunt circuit is equal to the current line and the current of each branch.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ16_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ16_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ16_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ16_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ16_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="item">
+				<label>译文3：Parallel circuit current is characterized by the current on the trunk is equal to the sum of the current and the branch.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ16_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ16_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ16_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ16_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ16_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="item">译文：The current characteristic in the parallel circuit is that the current of the dry road is equal to the sum of each branch current.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ16_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ16_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ16_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ16_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ16_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+			
+			
+		</div>
+		
+		<div classs="box">
+			<h4>
+				<span class="subject">17、原文：没事别鸡巴烦我。</span>        
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="item">
+				<label>译文1：No, don't bother me.</label>
+				<ul>	
+					<li>
+						<input id="a_1" name="QQ17_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ17_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ17_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ17_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ17_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="item">
+				<label>译文2：Nothing, don't bother me.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ17_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ17_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ17_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ17_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ17_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="item">
+				<label>译文3：Do not bother me.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ17_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ17_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ17_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ17_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ17_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="item">
+				<label>译文4：It's okay. don't bother me.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ17_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ17_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ17_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ17_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ17_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+			
+			
+		</div>
+		
+		<div classs="box">
+			<h4>
+				<span class="subject">18、原文：明知道自己长得丑，还他妈的敢出来逛街？</span>   
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="item">
+				<label>译文1：Know that you are ugly, still fucking dare to go shopping?</label>
+				<ul>
+					<li>
+						<input id="a_1" name="QQ18_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ18_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ18_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ18_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ18_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="item">
+				<label>译文2：Ming knew he was ugly and dared to come out to go shopping?</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ18_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ18_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ18_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ18_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ18_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="item">
+				<label>译文3：Know that they are ugly, but also fucking dare to go out shopping?</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ18_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ18_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ18_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ18_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ18_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="item">
+				<label>译文4：It's okay. don't bother me.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ18_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ18_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ18_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ18_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ18_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+			
+			
+		</div>
+		
+		
+		<div classs="box">
+			<h4>
+				<span class="subject">19、原文：豆面糕又称驴打滚，是北京小吃中的古老品种之一，它的原料是用黄米面加水蒸熟，和面时稍多加水和软些。</span>        
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="item">
+				<label>译文1：Dou mian gao, also known as Glutinous Rice Rolls with Sweet Bean Flour, is one of the ancient food in Beijing, its raw material is steamed with water and water with water, and a little more water and soft on the surface.</label>
+				<ul>
+					<li>
+						<input id="a_1" name="QQ19_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ19_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ19_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ19_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ19_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="item">
+				<label>译文2：Bean cake and that is one of the oldest varieties of Glutinous Rice Rolls with Sweet Bean Flour, Beijing snacks, its raw material is rice flour with water steam, and faces a little more water and soft.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ19_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ19_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ19_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ19_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ19_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="item">
+				<label>译文3：Bean cake, also known as donkey roll, is one of the old varieties of Beijing snacks, its raw materials are cooked with yellow rice noodles, and the surface slightly more water and soft.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ19_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ19_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ19_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ19_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ19_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="item">
+				<label>译文4：Dou Mian cake also called Glutinous Rice Rolls with Sweet Bean Flour is one of the old varieties of Beijing snacks. the raw material is steamed with yellow rice flour and water with a little more water and soft when the dough is.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ19_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ19_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ19_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ19_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ19_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+			
+			
+		</div>
+		
+		<div classs="box">
+			<h4>
+				<span class="subject">20、原文：汉中热面皮，是将大米磨碎制成的面皮蒸熟后，用盐、辣椒、醋等调味料搅拌，再配以时令蔬菜即可食用的一道美食。</span>       
+				<label class="rules">(必填, 单选)</label>
+			</h4>
+			
+			
+			<div id="item">
+				<label>译文1：The hot leather of Hanzhong is the dough made of rice to steam, stirring with salt, pepper, vinegar, etc.A good food with season vegetables.</label>
+				<ul>
+					
+					<li>
+						<input id="a_1" name="QQ20_1" type="radio" value="1">
+						<label for="a_1">1分</label>
+					</li>
+					<li>
+						<input id="a_2" name="QQ20_1"  type="radio" value="2">
+						<label for="1_2">2分</label>
+					</li>
+					<li>
+						<input id="a_3" name="QQ20_1" type="radio" value="3">
+						<label for="a_3">3分</label>
+					</li>
+					<li>
+						<input id="a_4" name="QQ20_1" type="radio" value="4">
+						<label for="a_4">4分</label>
+					</li>
+					<li >
+						<input id="a_5" name="QQ20_1"  type="radio" value="5">
+						<label for="a_5">5分</label>
+					</li>
+				</ul> 
+			</div>
+			
+			<div id="item">
+				<label>译文2：Hanzhoung is the hot bread, steamed rice made of grated dough after mixing with salt, pepper, vinegar and other seasonings, with a delicacy with seasonal vegetables can be eaten.
+</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ20_2" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ20_2"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ20_2" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ20_2" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ20_2"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+
+			<div id="item">
+				<label>译文3：Hanzhong hot dough, is made of rice ground dough steamed, with salt, pepper, vinegar and other seasonings stir, matched with seasonal vegetables can eat a food.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ20_3" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ20_3"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ20_3" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ20_3" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ20_3"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 
+
+					
+			</div>
+			
+			<div id="item">
+				<label>译文4：Hanzhong hot Mian Pi is a meal made from rice grinding, with salt, pepper, vinegar and other seasonings, and then with the season vegetables can eat a delicious food.</label>
+				<ul>
+					<li>
+						<input id="i_1" name="QQ20_4" type="radio" value="1">
+						<label for="i_1">1分</label>
+					</li>
+					<li>
+						<input id="i_2" name="QQ20_4"  type="radio" value="2">
+						<label for="i_2">2分</label>
+					</li>
+					<li>
+						<input id="i_3" name="QQ20_4" type="radio" value="3">
+						<label for="i_3">3分</label>
+					</li>
+					<li>
+						<input id="i_4" name="QQ20_4" type="radio" value="4">
+						<label for="i_4">4分</label>
+					</li>
+					<li >
+						<input id="i_5" name="QQ20_4"  type="radio" value="5">
+						<label for="i_5">5分</label>
+					</li>
+				</ul> 	
+			</div>
+			
+			
+		</div>
+			
+		<div id="item">
+				<input type="submit"  value="提交" onclick="addUser()" />
+		</div>
+	</div>
+	
+	</form>
+</body>
+
+</html>
+
